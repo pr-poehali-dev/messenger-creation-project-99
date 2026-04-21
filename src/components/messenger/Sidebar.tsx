@@ -30,7 +30,7 @@ export default function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
           className="w-10 h-10 rounded-2xl flex items-center justify-center animate-pulse-glow"
           style={{ background: "linear-gradient(135deg, #00e5ff, #9c27b0, #e91e8c)" }}
         >
-          <span className="text-white font-black text-sm">N</span>
+          <span className="text-white font-black text-sm">K</span>
         </div>
       </div>
 
