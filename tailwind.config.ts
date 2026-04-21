@@ -7,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+			"./1776762212145808005.html"
 	],
 	prefix: "",
 	theme: {
@@ -17,6 +18,9 @@ export default {
 				'2xl': '1400px'
 			}
 		},
+		fontFamily: {
+				golos: ['Golos Text', 'sans-serif'],
+			},
 		extend: {
 			colors: {
 				border: 'hsl(var(--border))',
@@ -88,7 +92,34 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fadeIn 0.4s ease-out forwards',
+				'slide-up': 'slideUp 0.4s ease-out forwards',
+				'float': 'float 3s ease-in-out infinite',
+				'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+				'message-in': 'messageIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+			},
+			keyframes: {
+				fadeIn: {
+					from: { opacity: '0', transform: 'translateY(8px)' },
+					to: { opacity: '1', transform: 'translateY(0)' },
+				},
+				slideUp: {
+					from: { opacity: '0', transform: 'translateY(20px)' },
+					to: { opacity: '1', transform: 'translateY(0)' },
+				},
+				float: {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-8px)' },
+				},
+				pulseGlow: {
+					'0%, 100%': { boxShadow: '0 0 15px rgba(0,229,255,0.3)' },
+					'50%': { boxShadow: '0 0 30px rgba(0,229,255,0.6), 0 0 60px rgba(0,229,255,0.2)' },
+				},
+				messageIn: {
+					from: { opacity: '0', transform: 'scale(0.85) translateY(10px)' },
+					to: { opacity: '1', transform: 'scale(1) translateY(0)' },
+				},
 			}
 		}
 	},
